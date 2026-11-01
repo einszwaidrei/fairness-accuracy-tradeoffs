@@ -102,11 +102,10 @@ These findings suggest that the effectiveness of bias mitigation depends on the 
 
 ![Accuracy comparison](results/accuracy_comparison.png)
 
-**Equal opportunity difference comparison**
+**Additional visualizations**
 
-![EOD comparison](results/eod_comparison.png)
-
-Additional metrics are visualized in [`results/secondary_metrics_comparison.png`](results/secondary_metrics_comparison.png).
+- [Equal opportunity difference comparison](results/eod_comparison.png)
+- [Secondary fairness metrics comparison](results/secondary_metrics_comparison.png)
 
 ## Repository Structure
 
@@ -167,13 +166,28 @@ The ACS data are downloaded automatically through Folktables and stored locally 
 
 The experiments use a fixed random seed of 42 for the data split and model initialization. Bootstrap-based estimates may depend on their respective random-state settings.
 
-## Limitations
 
-This study is restricted to one ACS task, one state, and one survey year. Results should not be assumed to generalize to other geographic populations, time periods, or prediction tasks.
+### Practical Implications
+
+The results suggest that mitigation strategies should be selected according to the relative importance of predictive performance and fairness objectives.
+
+For applications where equal opportunity is a priority, Threshold Optimization offers a promising trade-off. In the Logistic Regression experiments, it reduced the equal opportunity difference from 0.0342 to 0.0117, while accuracy decreased only slightly from 0.8081 to 0.8034.
+
+When preserving predictive accuracy is particularly important, Exponentiated Gradient may offer an alternative: for Logistic Regression, it reduced the equal opportunity difference to 0.0155 while maintaining accuracy at 0.8066.
+
+However, no single strategy performed best across all models and fairness metrics. In practice, organizations should choose mitigation methods based on the specific application, the costs of different prediction errors, relevant fairness requirements, and validation on representative deployment data. The results should not be interpreted as direct recommendations for credit lending, hiring, or other high-stakes decisions.
+
+
+## Limitations
 
 Group fairness metrics summarize differences in observed model outcomes. They do not independently establish discriminatory causation or resolve normative questions about which fairness criterion should be prioritized.
 
 The Accuracy–EOD Pareto frontier is descriptive of the evaluated configurations and does not imply statistical separation between nearby points.
+
+The findings are based on ACSIncome data from Illinois in 2018 and may not generalize to other states, time periods, populations, or real-world decision-making contexts. Further evaluation across multiple datasets and deployment settings is necessary before drawing broader conclusions.
+
+## Research Log
+For a detailed retrospective on the methodological decisions, intermediate findings, and refactoring process, see [docs/RESEARCH_LOG.md](docs/RESEARCH_LOG.md).
 
 ## References
 
