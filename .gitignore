@@ -1,0 +1,25 @@
+# Python virtual environment
+.venv/
+
+# Python temporary files
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# macOS files
+.DS_Store
+
+# Local files and downloaded datasets
+_local_archive/
+data/
+notebooks/data/
+*.csv.gz
+*.parquet
+*.feather
+
+# Ignore other CSV files, but retain research results
+*.csv
+!results/
+!results/*.csv

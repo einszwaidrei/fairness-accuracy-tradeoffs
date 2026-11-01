@@ -1,0 +1,9 @@
+Model,Strategy,Accuracy Change (pp),EOD Reduction (%)
+Logistic Regression,Baseline,0.0,0.0
+Logistic Regression,Reweighing,-0.23127424649358463,8.664348446346736
+Logistic Regression,Threshold Optimization,-0.47000895255147057,65.86420578663467
+Logistic Regression,ExponentiatedGradient,-0.1566696508504828,54.74789354019008
+Random Forest,Baseline,0.0,0.0
+Random Forest,Reweighing,0.08952551477171555,34.2396606574765
+Random Forest,Threshold Optimization,-0.7535064159952198,55.71580063626686
+Random Forest,ExponentiatedGradient,0.14174873172188018,-55.40190880169686
