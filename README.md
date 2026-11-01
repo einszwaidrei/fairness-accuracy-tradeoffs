@@ -187,7 +187,7 @@ The Accuracy–EOD Pareto frontier is descriptive of the evaluated configuration
 The findings are based on ACSIncome data from Illinois in 2018 and may not generalize to other states, time periods, populations, or real-world decision-making contexts. Further evaluation across multiple datasets and deployment settings is necessary before drawing broader conclusions.
 
 ## Research Log
-For a detailed retrospective on the methodological decisions, intermediate findings, and refactoring process, see [docs/RESEARCH_LOG.md](docs/RESEARCH_LOG.md).
+For a detailed retrospective on the methodological decisions, intermediate findings, and refactoring process, see [Research Log](docs/research_log.md).
 
 ## References
 
